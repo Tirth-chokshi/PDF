@@ -1,0 +1,1 @@
+3410df5c1aad033ec5bc6347ddf8616f2c997d4d431a21e0e02778c4fdeb17a6  working_copy/system_log.txt

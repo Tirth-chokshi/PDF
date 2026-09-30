@@ -1,0 +1,51 @@
+===== sorted alphabetically =====
+admin,192.168.1.10,2025-09-28,08:01,success
+admin,192.168.1.10,2025-09-28,14:22,success
+alice,192.168.1.30,2025-09-28,09:15,success
+guest,172.16.5.9,2025-09-28,10:45,unauthorized
+guest,172.16.5.9,2025-09-28,10:45,unauthorized
+john,192.168.1.25,2025-09-28,12:00,success
+john,192.168.1.25,2025-09-28,13:10,failed
+root,10.0.0.45,2025-09-28,08:05,failed
+root,10.0.0.45,2025-09-28,08:05,failed
+root,10.0.0.45,2025-09-28,08:06,failed
+===== unique records =====
+admin,192.168.1.10,2025-09-28,08:01,success
+admin,192.168.1.10,2025-09-28,14:22,success
+alice,192.168.1.30,2025-09-28,09:15,success
+guest,172.16.5.9,2025-09-28,10:45,unauthorized
+john,192.168.1.25,2025-09-28,12:00,success
+john,192.168.1.25,2025-09-28,13:10,failed
+root,10.0.0.45,2025-09-28,08:05,failed
+root,10.0.0.45,2025-09-28,08:06,failed
+===== count of each record (repeated entries have count > 1) =====
+      1 admin,192.168.1.10,2025-09-28,08:01,success
+      1 admin,192.168.1.10,2025-09-28,14:22,success
+      1 alice,192.168.1.30,2025-09-28,09:15,success
+      2 guest,172.16.5.9,2025-09-28,10:45,unauthorized
+      1 john,192.168.1.25,2025-09-28,12:00,success
+      1 john,192.168.1.25,2025-09-28,13:10,failed
+      2 root,10.0.0.45,2025-09-28,08:05,failed
+      1 root,10.0.0.45,2025-09-28,08:06,failed
+===== fields: user, ip, status =====
+admin,192.168.1.10,success
+root,10.0.0.45,failed
+root,10.0.0.45,failed
+root,10.0.0.45,failed
+john,192.168.1.25,success
+guest,172.16.5.9,unauthorized
+guest,172.16.5.9,unauthorized
+alice,192.168.1.30,success
+admin,192.168.1.10,success
+john,192.168.1.25,failed
+===== records arranged by user (field 1) =====
+admin,192.168.1.10,2025-09-28,08:01,success
+admin,192.168.1.10,2025-09-28,14:22,success
+alice,192.168.1.30,2025-09-28,09:15,success
+guest,172.16.5.9,2025-09-28,10:45,unauthorized
+guest,172.16.5.9,2025-09-28,10:45,unauthorized
+john,192.168.1.25,2025-09-28,12:00,success
+john,192.168.1.25,2025-09-28,13:10,failed
+root,10.0.0.45,2025-09-28,08:05,failed
+root,10.0.0.45,2025-09-28,08:05,failed
+root,10.0.0.45,2025-09-28,08:06,failed
