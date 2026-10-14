@@ -1,0 +1,48 @@
+===== all .txt files =====
+./working_copy/examined_notes.txt
+./working_copy/login_records.txt
+./working_copy/.hidden_note.txt
+./working_copy/system_log.txt
+./logs/file_metadata.txt
+./logs/file_search_results.txt
+./directory_structure.txt
+./evidence/login_records.txt
+./evidence/.hidden_note.txt
+./evidence/user_notes.txt
+./evidence/system_log.txt
+===== all .sh files =====
+./working_copy/suspicious_script.sh
+./evidence/suspicious_script.sh
+===== hidden files =====
+./working_copy/.hidden_note.txt
+./evidence/.hidden_note.txt
+===== files containing the word password =====
+evidence/user_notes.txt
+evidence/system_log.txt
+evidence/suspicious_script.sh
+working_copy/examined_notes.txt
+working_copy/system_log.txt
+working_copy/suspicious_script.sh
+===== files modified in the last 24 hours =====
+./working_copy/examined_notes.txt
+./working_copy/login_records.txt
+./working_copy/.hidden_note.txt
+./working_copy/system_log.txt
+./working_copy/suspicious_script.sh
+./logs/file_metadata.txt
+./logs/file_search_results.txt
+./directory_structure.txt
+./evidence/login_records.txt
+./evidence/.hidden_note.txt
+./evidence/user_notes.txt
+./evidence/system_log.txt
+./evidence/suspicious_script.sh
+===== files larger than 300 bytes =====
+./working_copy/login_records.txt
+./working_copy/system_log.txt
+./logs/file_metadata.txt
+./logs/file_search_results.txt
+./evidence/login_records.txt
+./evidence/system_log.txt
+===== files with executable permission =====
+./working_copy/suspicious_script.sh

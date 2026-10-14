@@ -1,0 +1,54 @@
+===== ls -lh =====
+total 20K
+-rw-r--r-- 1 root root  86 Sep 30 05:27 .hidden_note.txt
+-rw-r--r-- 1 root root 428 Sep 30 05:27 login_records.txt
+-rw-r--r-- 1 root root 171 Sep 30 05:27 suspicious_script.sh
+-rw-r--r-- 1 root root 944 Sep 30 05:27 system_log.txt
+-rw-r--r-- 1 root root 223 Sep 30 05:27 user_notes.txt
+===== file =====
+evidence/login_records.txt:    CSV ASCII text
+evidence/suspicious_script.sh: Bourne-Again shell script, ASCII text executable
+evidence/system_log.txt:       ASCII text
+evidence/user_notes.txt:       ASCII text
+evidence/.hidden_note.txt:     ASCII text
+===== stat =====
+  File: evidence/login_records.txt
+  Size: 428       	Blocks: 8          IO Block: 4096   regular file
+Device: 254,0	Inode: 475895      Links: 1
+Access: (0644/-rw-r--r--)  Uid: (    0/    root)   Gid: (    0/    root)
+Access: 2026-09-30 05:27:05.749655839 +0000
+Modify: 2026-09-30 05:27:04.963551017 +0000
+Change: 2026-09-30 05:27:04.963551017 +0000
+ Birth: 2026-09-30 05:27:03.835550950 +0000
+  File: evidence/suspicious_script.sh
+  Size: 171       	Blocks: 8          IO Block: 4096   regular file
+Device: 254,0	Inode: 475986      Links: 1
+Access: (0644/-rw-r--r--)  Uid: (    0/    root)   Gid: (    0/    root)
+Access: 2026-09-30 05:27:05.749710189 +0000
+Modify: 2026-09-30 05:27:05.479551047 +0000
+Change: 2026-09-30 05:27:05.479551047 +0000
+ Birth: 2026-09-30 05:27:03.835550950 +0000
+  File: evidence/system_log.txt
+  Size: 944       	Blocks: 8          IO Block: 4096   regular file
+Device: 254,0	Inode: 475762      Links: 1
+Access: (0644/-rw-r--r--)  Uid: (    0/    root)   Gid: (    0/    root)
+Access: 2026-09-30 05:27:05.743551063 +0000
+Modify: 2026-09-30 05:27:04.451550986 +0000
+Change: 2026-09-30 05:27:04.451550986 +0000
+ Birth: 2026-09-30 05:27:03.835550950 +0000
+  File: evidence/user_notes.txt
+  Size: 223       	Blocks: 8          IO Block: 4096   regular file
+Device: 254,0	Inode: 475985      Links: 1
+Access: (0644/-rw-r--r--)  Uid: (    0/    root)   Gid: (    0/    root)
+Access: 2026-09-30 05:27:05.749688832 +0000
+Modify: 2026-09-30 05:27:05.171551029 +0000
+Change: 2026-09-30 05:27:05.171551029 +0000
+ Birth: 2026-09-30 05:27:03.835550950 +0000
+  File: evidence/.hidden_note.txt
+  Size: 86        	Blocks: 8          IO Block: 4096   regular file
+Device: 254,0	Inode: 475987      Links: 1
+Access: (0644/-rw-r--r--)  Uid: (    0/    root)   Gid: (    0/    root)
+Access: 2026-09-30 05:27:05.749736657 +0000
+Modify: 2026-09-30 05:27:05.583551054 +0000
+Change: 2026-09-30 05:27:05.583551054 +0000
+ Birth: 2026-09-30 05:27:03.835550950 +0000

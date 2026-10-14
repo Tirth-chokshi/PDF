@@ -1,0 +1,14 @@
+system_log.txt:2:Sep 28 08:05:44 server sshd[1033]: Failed password for root from 10.0.0.45 port 40222
+system_log.txt:3:Sep 28 08:05:51 server sshd[1033]: Failed password for root from 10.0.0.45 port 40222
+system_log.txt:4:Sep 28 08:06:03 server sshd[1033]: Failed password for root from 10.0.0.45 port 40224
+system_log.txt:5:Sep 28 08:20:17 server kernel: error: disk sda2 write failed, retrying
+system_log.txt:7:Sep 28 09:30:02 server cron[2210]: (root) CMD (/usr/bin/backup.sh)
+system_log.txt:8:Sep 28 10:45:31 server sshd[1188]: Unauthorized access attempt from 172.16.5.9
+system_log.txt:9:Sep 28 11:02:09 server login: session opened for user guest
+system_log.txt:12:Sep 28 12:40:18 server httpd[900]: ERROR 500 on /admin/upload.php
+login_records.txt:2:root,10.0.0.45,2025-09-28,08:05,failed
+login_records.txt:3:root,10.0.0.45,2025-09-28,08:05,failed
+login_records.txt:4:root,10.0.0.45,2025-09-28,08:06,failed
+login_records.txt:6:guest,172.16.5.9,2025-09-28,10:45,unauthorized
+login_records.txt:7:guest,172.16.5.9,2025-09-28,10:45,unauthorized
+login_records.txt:10:john,192.168.1.25,2025-09-28,13:10,failed

@@ -1,0 +1,13 @@
+Sep 28 08:01:12 server sshd[1021]: Accepted password for admin from 192.168.1.10 port 51122
+Sep 28 08:05:44 server sshd[1033]: Failed password for root from 10.0.0.45 port 40222
+Sep 28 08:05:51 server sshd[1033]: Failed password for root from 10.0.0.45 port 40222
+Sep 28 08:06:03 server sshd[1033]: Failed password for root from 10.0.0.45 port 40224
+Sep 28 08:20:17 server kernel: error: disk sda2 write failed, retrying
+Sep 28 09:12:40 server sudo: john : user NOT in sudoers ; COMMAND=/bin/cat /etc/shadow
+Sep 28 09:30:02 server cron[2210]: (root) CMD (/usr/bin/backup.sh)
+Sep 28 10:45:31 server sshd[1188]: Unauthorized access attempt from 172.16.5.9
+Sep 28 11:02:09 server login: session opened for user guest
+Sep 28 11:15:55 server systemd[1]: Started Daily apt download activities
+Sep 28 12:00:00 server sshd[1290]: Accepted password for john from 192.168.1.25 port 50111
+Sep 28 12:40:18 server httpd[900]: ERROR 500 on /admin/upload.php
+Sep 30 10:15:00 server sshd[9999]: extra line added to the working copy

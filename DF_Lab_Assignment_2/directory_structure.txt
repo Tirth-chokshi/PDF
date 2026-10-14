@@ -1,0 +1,17 @@
+.:
+directory_structure.txt
+evidence
+extracted
+logs
+report
+working_copy
+
+./evidence:
+
+./extracted:
+
+./logs:
+
+./report:
+
+./working_copy:

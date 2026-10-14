@@ -1,0 +1,12 @@
+===== MD5 =====
+7a1cc8502504de7741d3ba0d2d1dc691  login_records.txt
+84b36fcce240ef32c68dd12afdf5fac6  suspicious_script.sh
+bfe5a194c02c08142c2e4d18facf1c5d  system_log.txt
+3567ffe214e77fb007ccf5d9ccf826dc  user_notes.txt
+847e996ed1dd0e636559c2a8e9def95e  .hidden_note.txt
+===== SHA-256 =====
+afd4c67f8210d5e261ab866eaef9b4c0ccc7b86c66266b99db79eec7a579ffbe  login_records.txt
+13962807d450a07fb66ed665edbfd0f0596969245c1a8034d1e01dc5ab16d9da  suspicious_script.sh
+4d3cd1e8c5d6d2ab088bde3d7f92a94a7ad648127d7415b3d144e9cb13d62bca  system_log.txt
+aca9f05608ebcac0b8eb863b40412e8d31aa2992ce409d7f7c163a200e962843  user_notes.txt
+c90224049746b32f2593da6f939ae69e39c86ef8248f4354ac5ef237bff1d6e7  .hidden_note.txt

@@ -1,0 +1,4 @@
+Meeting with vendor on friday, need to change the admin password soon.
+Do not share the server ip 192.168.1.10 with anyone.
+Backup script runs at 9:30 every day as root.
+Ask john about the files he copied from /etc/shadow.
